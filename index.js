@@ -50,4 +50,40 @@
 
     console.log(output);
   }
+  
+  function game() {
+    let win = 0;
+    let lost = 0;
+
+    for (let i = 0; i < 5; i++) {
+      const playerSelection = getPlayerChoice();
+      const computerSelection = getComputerChoice();
+      const result = playRound(playerSelection, computerSelection);
+      
+      console.log(result);
+      if (result === 'You won!') {
+        win++;
+        console.log(`${playerSelection} beats  ${computerSelection}`);
+      } else if (result === 'You lost!') {
+        lost++;
+        console.log(`${playerSelection} is beaten by ${computerSelection}`);
+      } else {
+        console.log(`${playerSelection} ties with ${computerSelection}`);
+      }
+
+      if (win === 3 || lost === 3) {
+        break;
+      }
+    }
+
+    if (win > lost) {
+      console.log('You are winner!');
+    } else if (win < lost) {
+      console.log('You are loser!');
+    } else {
+      console.log('Game tie!');
+    }
+  }
+  
+  game();
 })(window, Math);
