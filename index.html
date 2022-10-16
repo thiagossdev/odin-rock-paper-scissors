@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project: Rock Paper Scissors</title>
+  <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="header bg-primary">
+    <div class="container">
+      <div class="left-header">
+        <div class="logo text-white">
+          Project: Rock Paper Scissors
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="container">
+      <div class="section-info">
+        <div class="subtitle text-primary" id="result">Choose your weapon</div>
+        <div class="title text-primary">Round <span id="round">1</span></div>
+  
+        <div class="row">
+          <div class="display" id="player">
+            <div class="text-center current">❓</div>
+            <div class="subtitle text-primary text-center">Player: <span class="counter">0</span></div>
+          </div>
+  
+          <div class="display" id="computer">
+            <div class="text-center current">❓</div>
+            <div class="subtitle text-primary text-center">Computer: <span class="counter">0</span></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <button class="btn btn-primary" value="rock">✊</button>
+  
+          <button class="btn btn-primary" value="papper">✋</button>
+  
+          <button class="btn btn-primary" value="scissors">✌</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer bg-primary text-white">
+    Copyright &copy; Project: Rock Paper Scissors ❤️
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
